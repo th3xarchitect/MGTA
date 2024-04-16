@@ -1,0 +1,160 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    background-color: black;
+  }
+  
+
+  .slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;            
+}
+
+.frame {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  right: 10%;
+  bottom: 5%;
+  animation: moveFrame 60s infinite alternate ease-in-out;
+}
+  
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 1;
+}
+
+.active {
+  opacity: 1;
+  z-index: 2;
+}
+  
+  .background {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .foreground {
+    background-position-x: center;
+    background-position-y: bottom;
+  }
+
+  .background, .foreground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+  }
+
+@keyframes moveFrame {
+  0% {
+      clip-path: polygon(5% 0%, 100% 15%, 95% 100%, 0% 85%);
+  }
+  50% {
+      clip-path: polygon(0% 10%, 90% 5%, 100% 90%, 10% 95%);
+  }
+  100% {
+      clip-path: polygon(5% 0%, 100% 15%, 95% 100%, 0% 85%);
+  }
+}
+  
+  @keyframes moveBackground {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes kenburns {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+  }
+  
+  @keyframes slideLeftRight {
+    0% { transform: translateX(-10%); }
+    100% { transform: translateX(10%); }
+  }
+  
+
+  .background1 {
+    background-image: url('./backgrounds/bg1.jpg');
+    animation: kenburns 10s ease-in-out infinite alternate;
+  }
+  
+  .foreground1 {
+    background-image: url('./foregrounds/joker.png');
+    animation: slideLeftRight 10s ease-in-out infinite alternate;
+  }
+
+    
+  .background2 {
+    background-image: url('./backgrounds/bg2.jpg');
+    animation: kenburns 10s ease-in-out infinite alternate;
+  }
+  
+  .foreground2 {
+    background-image: url('./foregrounds/neo.png');
+    animation: slideLeftRight 10s ease-in-out infinite alternate;
+  }
+
+    
+  .background3 {
+    background-image: url('./backgrounds/bg3.jpg');
+    animation: kenburns 10s ease-in-out infinite alternate;
+  }
+  
+  .foreground3 {
+    background-image: url('./foregrounds/morpheus.png');
+    animation: slideLeftRight 10s ease-in-out infinite alternate;
+  }
+
+  .background4 {
+    background-image: url('./backgrounds/bg4.jpg');
+    animation: kenburns 10s ease-in-out infinite alternate;
+  }
+  
+  .foreground4 {
+    background-image: url('./foregrounds/trinity.png');
+    animation: slideLeftRight 10s ease-in-out infinite alternate;
+  }
+
+  .background5 {
+    background-image: url('./backgrounds/bg5.jpg');
+    animation: kenburns 10s ease-in-out infinite alternate;
+  }
+  
+  .foreground5 {
+    background-image: url('./foregrounds/smith.png');
+    animation: slideLeftRight 10s ease-in-out infinite alternate;
+  }
+
+  .background6 {
+    background-image: url('./backgrounds/bg6.jpg');
+    animation: kenburns 10s ease-in-out infinite alternate;
+  }
+  
+  .foreground6 {
+    background-image: url('./foregrounds/the-architect.png');
+    animation: slideLeftRight 10s ease-in-out infinite alternate;
+  }
+
+  .background7 {
+    background-image: url('./backgrounds/bg7.jpg');
+    animation: kenburns 10s ease-in-out infinite alternate;
+  }
+  
+  .foreground7 {
+    background-image: url('./foregrounds/the-oracle.png');
+    animation: slideLeftRight 10s ease-in-out infinite alternate;
+  }
+  
